@@ -14,14 +14,23 @@ export default function App(){
 
 function Logo() {
 
-   return <h1>🌴FAR AWAY🏖</h1>
+   return <h1 className='logos'>🌴FAR AWAY🏖</h1>
      
 }
 
 function Form() {
-    return <div className='Addform'>
+    return <form className='Addform'>
       <h2>What do you want to pack</h2>
-    </div>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <input type='text'></input>
+      <button>Submit</button>
+    </form>
 
     
 }
