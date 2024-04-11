@@ -2,7 +2,7 @@
 import './App.css'
 
 export default function App(){
-   return <div>
+   return <div className='App'>
 
      <Logo />
      <Form />
@@ -21,6 +21,7 @@ function Logo() {
 function Form() {
     return <form className='Addform'>
       <h2>What do you want to pack</h2>
+      <div className='options'>
       <select>
         <option>1</option>
         <option>2</option>
@@ -30,6 +31,8 @@ function Form() {
       </select>
       <input type='text'></input>
       <button>Submit</button>
+      </div>
+       
     </form>
 
     

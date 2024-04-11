@@ -1,7 +1,13 @@
 
 
 :root {
-  --screen-height: 100vh; /* Set the total height of the screen */
+   --Logo: 10vh;
+  --Form: 10vh;
+  /* --packing-List: calc(100vh - calc(var(--Logo)+ var(--Form) + var(--footer))); */
+  /* --packing-List: calc(var(--screen-height) - calc(var(--Logo) + var(--Form) + var(--footer))); */
+  --packing-List:65vh;
+   --footer:5vh;
+   box-sizing: border-box;
 }
 
 /* css rule for the body and html */
@@ -12,7 +18,7 @@ body, html {
 }
 
 /* styling for the entire application */
-.App {
+App {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,37 +26,40 @@ body, html {
   height: 100%;
 }
 
- /* Heading one fr the first section of the page */
+ /* The first section of the page */
 
 .logos{
    text-align: center;
    color: red;
+   position: static;
+   background-color: green;
+   height: var(--Logo);
+   margin-top: 0;
+   margin-bottom: 0;
+
+
 }
 
-/* The first secetion of the page */
-.Logo {
-  font-size: 2em;
-  margin-bottom: 20px;
-  position: fixed;
-  top: 0;
-}
 
 /* The form to add data to the List */
 .Addform {
+  margin-top: 0;
   display: flex;
   background-color: #f0f0f0;
-  /* padding: 20px; */
-  height: 100px;
+  padding: 10px;
+  height: var(--Form);
   border-radius: 10px;
 }
+
+/* ADD FORM FORM OPTIONS */
+ 
 
 /* The list containing the data added via the form */
 .List {
   background-color: brown;
   padding: 20px;
   border-radius: 1px;
-  margin-bottom: 0;
-  height: 450px;
+  height:var(--packing-List);
  }
 
  /* Styling for the footer */
@@ -64,6 +73,7 @@ footer {
   padding: 10px;
   text-align: center;
   background-color: darkturquoise;
+  height: var(--footer);
 }
 
 /* Styling for the buttons */
