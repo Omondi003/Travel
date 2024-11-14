@@ -15,10 +15,15 @@ function Form() {
     function handleSubmit(e){
 
      console.log(items)
-     
      e.preventDefault()
-    }
 
+    }
+    function handleChange(e){
+       const [name, value]=e.target;
+       setItems(prevData=> ({ ...prevData, [name]:value}))
+
+    }
+    
 
      return <form className='Addform' onSubmit={handleSubmit}>
        <h2>What do you want to pack</h2>
@@ -27,6 +32,7 @@ function Form() {
        <select
         name='selectedNumber'
         value={items.selectedNumber}
+        onChange={handleChange}
        >
         {Array.from({length:20}, (_,i)=> i+1).map(
          (num)=> (
@@ -40,6 +46,7 @@ function Form() {
        <input 
          type='text'
          value={items.textInput}
+         onChange={handleChange}
 
         />
                <button>Submit</button>
