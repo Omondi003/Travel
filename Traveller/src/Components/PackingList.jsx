@@ -2,10 +2,10 @@
 import React from 'react'
 let classItems=[
 
-    {Amount:2, name:'socks', status:true },
-    {Amount:3, name:'sweater',status:false},
-    {Amount:4, name:'Trousers',status:true},
-    {Amount:5, name:'jackets', status:false}
+    [2, 'socks', true ],
+    [3, 'sweater', false],
+    [4, 'Trousers', true],
+    [5, 'jackets', false]
   
   ]
 
