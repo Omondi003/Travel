@@ -1,22 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-let classItems=[
-
-    [2, 'socks', true ],
-    [3, 'sweater', false],
-    [4, 'Trousers', true],
-    [5, 'jackets', false]
-  
-  ]
-
  
 
-
-function PackingList() {
+function PackingList({items}) {
     return <div className='List'>
-     <ul>
+     <ul  >
  
-     {classItems.map((item)=> (
+     {items.map((item)=> (
  
          <Items value={item} key={item.id} />
         
@@ -29,21 +19,22 @@ function PackingList() {
 
 
  // Function to render each value And Item on packing list component
-function Items(props){
-    // Access item from props
-    
-     const { Amount, name, status } = props.value;
+ function Items(props) {
 
+  const { Amount, name, status } = props.value; // Now correctly mapped
 
-    return <li>
-
-    <span>
-        Amount: {Amount}, Name: {name}, Packed: {status ? 'Yes' : 'No'}
-      </span>
-
-    </li>
- }
+  return (
+      <li style={{ listStyle: 'none', color: 'white', fontFamily: 'Poppins' }}>
+          <span>{Amount} </span>
+          <span>{name} </span>
+          <span style={{ color: 'yellow' }}>{status ? 'Yes' : 'No'}</span>
+      </li>
+  );
+}
 
  
 
 export default PackingList
+
+
+ 
